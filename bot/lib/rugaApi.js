@@ -35,7 +35,7 @@ const ytmp4 = async (url) => new Promise((resolve, reject) => {
 const stalkig = async (url) => new Promise((resolve, reject) => {
     axios.get(`${link}/api/stalk?username=${url}`)
     .then((res) => {
-        const text = `Astri-Chan API y IcarusBot\n Usuário: ${res.data.Username}\nNome: ${res.data.Name}\nBio: ${res.data.Biodata}\nSeguidores: ${res.data.Jumlah_Followers}\nSeguindo: ${res.data.Jumlah_Following}\npost: ${res.data.Jumlah_Post}`
+        const text = `Astri-Chan API y IcarusBot\n UsuÃ¡rio: ${res.data.Username}\nNome: ${res.data.Name}\nBio: ${res.data.Biodata}\nSeguidores: ${res.data.Jumlah_Followers}\nSeguindo: ${res.data.Jumlah_Following}\npost: ${res.data.Jumlah_Post}`
         resolve(text)
     })
     .catch((err) =>{
@@ -65,7 +65,7 @@ const quote = async () => new Promise((resolve, reject) => {
 })
 
 const wiki = async (url) => new Promise((resolve, reject) => {
-    axios.get(`${link}/api/wiki?q=${url}`)
+    axios.get(`${link}/api/wikipt?q=${url}`)
     .then((res) => {
         resolve(res.data.result)
     })
